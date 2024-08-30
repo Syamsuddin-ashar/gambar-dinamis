@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Gallery</title>
+    <!-- Menautkan file CSS untuk mengatur gaya halaman -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Menautkan Font Awesome untuk ikon, seperti ikon close pada lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Kontainer utama untuk galeri -->
+    <div class="gallery-container">
+        <!-- Tombol filter untuk memilih kategori gambar -->
+        <div class="filter-buttons">
+            <!-- Tombol untuk menampilkan semua kategori -->
+            <button class="filter-button" data-filter="all">All</button>
+            <!-- Tombol untuk menampilkan kategori "Nature" -->
+            <button class="filter-button" data-filter="nature">Nature</button>
+            <!-- Tombol untuk menampilkan kategori "City" -->
+            <button class="filter-button" data-filter="city">City</button>
+            <!-- Tombol untuk menampilkan kategori "Videos" -->
+            <button class="filter-button" data-filter="videos">Videos</button>
+        </div>
+
+        <!-- Carousel untuk menampilkan gambar dan video -->
+        <div class="carousel" id="carousel">
+            <div class="carousel-slide">
+                <!-- Gambar kategori "Nature" dengan deskripsi -->
+                <img src="https://www.shutterstock.com/image-photo/software-coding-hologram-woman-data-260nw-2463475985.jpg" alt="Nature" class="gallery-item nature" data-caption="Beautiful Nature">
+                <!-- Gambar kategori "City" dengan deskripsi -->
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20230930/pngtree-3d-computer-and-yellow-code-a-programmer-s-toolset-image_13526520.png" alt="City" class="gallery-item city" data-caption="Urban City Life">
+                <!-- Gambar lain dalam kategori "Nature" dengan deskripsi -->
+                <img src="https://png.pngtree.com/background/20231018/original/pngtree-computer-programmer-operating-3d-rendering-robot-in-automated-work-environment-picture-image_5598534.jpg" alt="Nature" class="gallery-item nature" data-caption="Serene Landscape">
+                <!-- Video dalam kategori "Videos" dengan deskripsi -->
+                <video controls class="gallery-item videos" data-caption="City Video">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Thumbnail gambar untuk navigasi cepat -->
+        <div class="thumbnails">
+            <!-- Thumbnail gambar "Nature" -->
+            <img src="img1.jpg" alt="Nature" class="thumbnail nature">
+            <!-- Thumbnail gambar "City" -->
+            <img src="img2.jpg" alt="City" class="thumbnail city">
+            <!-- Thumbnail gambar lain "Nature" -->
+            <img src="img3.jpg" alt="Nature" class="thumbnail nature">
+            <!-- Thumbnail untuk video -->
+            <img src="img-thumbnail.png" alt="Video" class="thumbnail videos">
+        </div>
+    </div>
+
+    <!-- Lightbox untuk menampilkan gambar atau video dalam ukuran besar -->
+    <div id="lightbox" class="lightbox">
+        <!-- Tombol untuk menutup lightbox -->
+        <span class="close">&times;</span>
+        <!-- Gambar yang ditampilkan dalam lightbox -->
+        <img class="lightbox-content" id="lightbox-img">
+        <!-- Deskripsi atau caption untuk gambar/video dalam lightbox -->
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Menautkan file JavaScript untuk mengatur interaksi dan fungsionalitas galeri -->
+    <script src="script.js"></script>
+</body>
+</html>

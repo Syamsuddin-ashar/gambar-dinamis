@@ -1,0 +1,127 @@
+/* Mengatur gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif; /* Mengatur font utama */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    background-color: #f4f4f4; /* Mengatur warna latar belakang */
+}
+
+/* Mengatur kontainer utama galeri */
+.gallery-container {
+    width: 80%; /* Lebar kontainer 80% dari layar */
+    margin: 50px auto; /* Memberi jarak dari atas dan meratakan kontainer ke tengah */
+}
+
+/* Mengatur tombol filter */
+.filter-buttons {
+    text-align: center; /* Memusatkan tombol filter */
+    margin-bottom: 20px; /* Memberi jarak di bawah tombol filter */
+}
+
+.filter-button {
+    padding: 10px 20px; /* Memberi padding pada tombol */
+    margin: 5px; /* Memberi jarak antara tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat tombol diklik */
+    background-color: #333; /* Warna latar tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Membuat sudut tombol menjadi melengkung */
+}
+
+/* Mengatur efek hover pada tombol filter */
+.filter-button:hover {
+    background-color: #555; /* Mengubah warna latar saat dihover */
+}
+
+/* Mengatur carousel untuk menampilkan gambar dan video */
+.carousel {
+    position: relative; /* Mengatur posisi relatif untuk elemen di dalamnya */
+    overflow: hidden; /* Menyembunyikan bagian konten yang melampaui batas kontainer */
+}
+
+/* Mengatur gaya slide dalam carousel */
+.carousel-slide {
+    display: flex; /* Mengatur elemen di dalamnya agar berbaris secara horizontal */
+    transition: transform 0.5s ease-in-out; /* Efek transisi saat slide berpindah */
+}
+
+/* Mengatur gambar dan video di dalam carousel */
+.carousel-slide img,
+.carousel-slide video {
+    max-width: 100%; /* Mengatur lebar maksimum menjadi 100% dari kontainer */
+    min-width: 100%; /* Mengatur lebar minimum menjadi 100% dari kontainer */
+    display: block; /* Mengatur tampilan sebagai elemen blok */
+    object-fit: cover; /* Memastikan gambar/video menutupi area kontainer */
+}
+
+/* Mengatur thumbnail untuk navigasi cepat */
+.thumbnails {
+    display: flex; /* Mengatur elemen di dalamnya agar berbaris secara horizontal */
+    justify-content: center; /* Memusatkan thumbnail di tengah */
+    margin-top: 20px; /* Memberi jarak di atas thumbnail */
+}
+
+.thumbnail {
+    width: 100px; /* Lebar setiap thumbnail */
+    margin: 10px; /* Memberi jarak antara thumbnail */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
+    opacity: 0.7; /* Mengatur opacity thumbnail */
+}
+
+/* Efek hover pada thumbnail */
+.thumbnail:hover {
+    opacity: 1; /* Meningkatkan opacity saat dihover */
+}
+
+/* Mengatur lightbox untuk menampilkan gambar/video dalam ukuran besar */
+.lightbox {
+    display: none; /* Menyembunyikan lightbox secara default */
+    position: fixed; /* Memposisikan lightbox secara tetap di layar */
+    z-index: 999; /* Memastikan lightbox berada di atas semua elemen lain */
+    padding-top: 60px; /* Memberi jarak dari atas */
+    left: 0; /* Mengatur posisi kiri */
+    top: 0; /* Mengatur posisi atas */
+    width: 100%; /* Lebar lightbox 100% dari layar */
+    height: 100%; /* Tinggi lightbox 100% dari layar */
+    background-color: rgba(0,0,0,0.9); /* Warna latar belakang dengan sedikit transparansi */
+}
+
+/* Mengatur gambar/video dalam lightbox */
+.lightbox-content {
+    margin: auto; /* Meratakan konten lightbox ke tengah */
+    display: block; /* Mengatur tampilan sebagai elemen blok */
+    width: 80%; /* Lebar konten lightbox 80% dari kontainer */
+    max-width: 700px; /* Lebar maksimum konten lightbox */
+}
+
+/* Mengatur caption/deskripsi dalam lightbox */
+#lightbox-caption {
+    text-align: center; /* Memusatkan teks caption */
+    color: #ccc; /* Warna teks caption */
+    padding: 10px 0; /* Memberi padding di atas dan bawah caption */
+    height: 30px; /* Tinggi area caption */
+}
+
+/* Mengatur tombol close untuk menutup lightbox */
+.close {
+    position: absolute; /* Memposisikan tombol close di atas konten lightbox */
+    top: 15px; /* Posisi tombol 15px dari atas */
+    right: 35px; /* Posisi tombol 35px dari kanan */
+    color: #f1f1f1; /* Warna tombol */
+    font-size: 40px; /* Ukuran font tombol */
+    font-weight: bold; /* Tebal font tombol */
+    transition: 0.3s; /* Efek transisi saat dihover */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
+}
+
+/* Efek hover pada tombol close */
+.close:hover {
+    color: #bbb; /* Mengubah warna tombol saat dihover */
+}
+
+/* Responsif: Mengatur ukuran lightbox pada layar kecil */
+@media screen and (max-width: 700px) {
+    .lightbox-content {
+        width: 100%; /* Lebar lightbox menjadi 100% pada layar kecil */
+    }
+}
